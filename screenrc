@@ -6,3 +6,6 @@ activity "Activity in %t(%n)"
 
 shelltitle "shell"
 shell -$SHELL
+
+# for ESC key to work in vim
+maptimeout 5
