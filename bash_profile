@@ -23,3 +23,6 @@ alias ll='ls -al'
 function gtree { git log "$@" --graph --full-history --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"; }
 function gtree2 { git log $1 --not $( git show-ref --heads | cut -d' ' -f2 | grep -v "^$1" ) --graph --full-history --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"; }
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
