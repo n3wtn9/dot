@@ -1,5 +1,10 @@
 Pain in the ass to get setup.
 
+### run vncserver
+```
+vncserver --geometry 1440x900
+```
+
 ### Instructions
 Setup gce and ubuntu with tightvncserver
 
