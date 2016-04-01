@@ -2,7 +2,7 @@ Pain in the ass to get setup.
 
 ### run vncserver
 ```
-vncserver --geometry 1440x900
+vncserver --geometry 1280x800
 ```
 
 ### Instructions
