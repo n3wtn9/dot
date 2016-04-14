@@ -2,6 +2,7 @@
 set backspace=2
 syntax on
 filetype indent on
+filetype plugin on
 set autoindent
 set number
 set tabstop=2
