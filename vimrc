@@ -11,3 +11,5 @@ set expandtab
 colorscheme desert
 set nobackup
 set incsearch
+set ignorecase
+set wrapscan
