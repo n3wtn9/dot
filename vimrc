@@ -10,3 +10,4 @@ set shiftwidth=2
 set expandtab
 colorscheme desert
 set nobackup
+set incsearch
