@@ -23,7 +23,7 @@ apt-get install --no-install-recommends ubuntu-gnome-desktop
 dpkg-reconfigure gdm
 ```
 
-paste in `~/.vnc/xstartup` and chmod 755 just in case
+paste in `~/.vnc/xstartup` and *chmod 755* just in case
 ```
 #!/bin/sh
 [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
