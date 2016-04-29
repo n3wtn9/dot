@@ -13,7 +13,7 @@ https://medium.com/google-cloud/linux-gui-on-the-google-cloud-platform-800719ab2
 Install ubuntu desktop (ended up with unity) or ubuntu gnome desktop
 
 ```
-apt-get install ubuntu-desktop -y
+apt-get install -y --no-install-recommends ubuntu-desktop
 dpkg-reconfigure lightdm
 gsettings set org.gnome.desktop.background show-desktop-icons true
 ```
