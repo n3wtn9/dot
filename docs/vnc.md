@@ -9,9 +9,14 @@ vncserver --geometry 1280x800
 Setup gce and ubuntu with tightvncserver
 
 https://medium.com/google-cloud/linux-gui-on-the-google-cloud-platform-800719ab27c5#.5mvzxm1qw
+http://askubuntu.com/questions/475023/how-to-make-vnc-server-work-with-ubuntu-desktop-without-xfce
+
+Prereq
+```
+apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
+```
 
 Install ubuntu desktop (ended up with unity) or ubuntu gnome desktop
-
 ```
 apt-get install --no-install-recommends ubuntu-desktop
 dpkg-reconfigure lightdm
@@ -26,11 +31,14 @@ dpkg-reconfigure gdm
 paste in `~/.vnc/xstartup` and *chmod 755* just in case
 ```
 #!/bin/sh
+export XKL_XMODMAP_DISABLE=1
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
 [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 xsetroot -solid grey
 vncconfig -iconic &
-x-window-manager &
 
 gnome-panel &
 gnome-settings-daemon &
