@@ -11,3 +11,4 @@ colorscheme desert
 set nobackup
 set incsearch
 set ignorecase
+set background=dark
