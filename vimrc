@@ -16,3 +16,7 @@ set background=dark
 " vsplit default to right and below
 set splitright
 set splitbelow
+
+" show line breaks
+set list
+set listchars=eol:¬
