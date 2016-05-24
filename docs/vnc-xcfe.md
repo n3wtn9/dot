@@ -49,8 +49,18 @@ exit 0
 
 chmod +x /etc/init.d/vncserver
 
+```
+sudo service vncserver start
+```
+
 Create a ssh tunnel from your local
 
 ```
 ssh -L 5901:127.0.0.1:5901 -N -f -l user server_ip_address
+```
+
+setup default on boot
+
+```
+sudo update-rc.d vncserver defaults
 ```
