@@ -20,3 +20,8 @@ set splitbelow
 " show line breaks
 set list
 set listchars=eol:¬
+
+" Automatically switch window to current directory.
+" This should have less problems than set autochdir.
+" If there is wierd behavior with other apps, this might be the problem.
+autocmd BufEnter * silent! lcd %:p:h
