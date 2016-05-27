@@ -1,0 +1,7 @@
+### autostart
+sudo update-rc.d ipsec defaults
+sudo update-rc.d xl2tpd defaults
+
+### remove autostart
+sudo update-rc.d -f ipsec remove
+sudo update-rc.d -f xl2tpd remove
