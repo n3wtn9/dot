@@ -5,3 +5,5 @@ Using this setup will have mouse scrolling
 1. use iTerm
 2. brew install tmux --HEAD
 3. brew install reattach-to-user-namespace
+
+https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future
