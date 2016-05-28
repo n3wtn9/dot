@@ -12,6 +12,7 @@ set nobackup
 set incsearch
 set ignorecase
 set background=dark
+set nowrap
 
 " vsplit default to right and below
 set splitright
