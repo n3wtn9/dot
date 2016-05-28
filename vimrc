@@ -18,7 +18,7 @@ set splitright
 set splitbelow
 
 " show line breaks
-set list
+" set list
 set listchars=eol:¬
 
 " Automatically switch window to current directory.
