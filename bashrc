@@ -56,6 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+### Custom Term Display ###
 #if [ "$color_prompt" = yes ]; then
 #    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 #else
@@ -71,6 +72,20 @@ fi
 #*)
 #    ;;
 #esac
+
+__git_ps1()
+{ 
+  local b="$(git symbolic-ref HEAD 2>/dev/null)";
+  if [ -n "$b" ]; then
+  printf "$1" "${b##refs/heads/}";
+  fi
+}
+export PS1='\[\e[0;95m\]In \w:\n\[\e[0;37m\]\D{%a %b %e %r}\[\e[0m\] \[\e[0;96m\]\u\[\e[0;91m\]@\h\[\e[0m\] \[\e[1;95m\]\W\[\e[0m\] $(__git_ps1 "(\[\e[1;33m\]%s\[\e[m\])") \[\e[1;33m\]\$\[\e[0m\] '
+
+### END Custom Term Display ###
+
+function gtree { git log "$@" --graph --full-history --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"; }
+function gtree2 { git log $1 --not $( git show-ref --heads | cut -d' ' -f2 | grep -v "^$1" ) --graph --full-history --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"; }
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
