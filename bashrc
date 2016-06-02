@@ -89,6 +89,7 @@ function gtree { git log "$@" --graph --full-history --color --pretty=format:"%x
 function gtree2 { git log $1 --not $( git show-ref --heads | cut -d' ' -f2 | grep -v "^$1" ) --graph --full-history --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"; }
 
 # enable color support of ls and also add handy aliases
+export CLICOLOR=1
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
