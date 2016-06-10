@@ -24,7 +24,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
-colorscheme janah
+colorscheme desert
 set nobackup
 set incsearch
 set ignorecase
