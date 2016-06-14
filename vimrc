@@ -10,9 +10,11 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
-Plugin 'wincent/command-t'
-Plugin 'chriskempson/base16-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -20,7 +22,7 @@ filetype plugin indent on    " required
 
 " Make backspace behave in a sane manner.
 set backspace=2
-syntax on
+syntax enable
 set autoindent
 set tabstop=2
 set shiftwidth=2
@@ -33,9 +35,9 @@ set textwidth=79
 set shiftround
 
 " order matters
-let base16colorspace=256
-colorscheme desert
 set background=dark
+colorscheme solarized
+
 
 " vsplit default to right and below
 set splitright
