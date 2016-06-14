@@ -29,6 +29,8 @@ set nobackup
 set incsearch
 set ignorecase
 set nowrap
+set textwidth=79
+set shiftround
 
 " order matters
 let base16colorspace=256
