@@ -32,7 +32,6 @@ set expandtab
 set nobackup
 set incsearch
 set ignorecase
-set nowrap
 set textwidth=79
 set shiftround
 
@@ -60,7 +59,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 " neerdtree
-au VimEnter *  NERDTree
+" au VimEnter *  NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 " Synatstic
