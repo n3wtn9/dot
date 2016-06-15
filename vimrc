@@ -17,7 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
-
+Plugin 'janko-m/vim-test'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +59,8 @@ set listchars=eol:¬
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
+" neerdtree
+au VimEnter *  NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 " Synatstic
@@ -84,3 +86,14 @@ hi IndentGuidesEven ctermbg=darkgrey
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
+
+" move among buffers with CTRL
+map <C-K> :bn<CR>
+map <C-J> :bp<CR>
+
+" config 'janko-m/vim-test'
+nmap <silent> <leader>t :TestNearest<CR>
+" nmap <silent> <leader>T :TestFile<CR>
+" nmap <silent> <leader>a :TestSuite<CR>
+" nmap <silent> <leader>l :TestLast<CR>
+" nmap <silent> <leader>g :TestVisit<CR>
