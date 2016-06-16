@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'janko-m/vim-test'
+Plugin 'raimondi/delimitmate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,7 +57,7 @@ set listchars=eol:¬
 " autocmd BufEnter * silent! lcd %:p:h
 
 set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " neerdtree
 " au VimEnter *  NERDTree
@@ -90,9 +91,21 @@ let g:indent_guides_guide_size=1
 map <C-K> :bn<CR>
 map <C-J> :bp<CR>
 
-" config 'janko-m/vim-test'
+" config janko-m/vim-test
 nmap <silent> <leader>t :TestNearest<CR>
-" nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>T :TestFile<CR>
 " nmap <silent> <leader>a :TestSuite<CR>
 " nmap <silent> <leader>l :TestLast<CR>
 " nmap <silent> <leader>g :TestVisit<CR>
+
+" config ctrlp ignore cards
+let g:ctrlp_by_filename = 1
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class     " MacOSX/Linux
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
