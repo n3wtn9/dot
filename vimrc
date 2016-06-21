@@ -109,12 +109,16 @@ nmap <silent> <leader>T :TestFile<CR>
 
 " config ctrlp ignore cards
 let g:ctrlp_by_filename = 1
+" Use the nearest .git directory as the cwd
+" " This makes a lot of sense if you are working on a project that is in
+" version
+" " control. It also supports works with .svn, .hg, .bzr.
+let g:ctrlp_working_path_mode = 'r'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*     " MacOSX/Linux
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
