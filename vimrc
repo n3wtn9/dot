@@ -77,8 +77,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_w = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
+" let g:syntastic_check_on_w = 1
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
 " noremap <C-w>e :SyntasticCheck<CR>
 " noremap <C-w>f :SyntasticToggleMode<CR>
 " To disable warnings use: 
@@ -88,7 +88,7 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
 let g:syntastic_javascript_checkers = ['flow']
-let g:syntastic_javascript_flow_exe = 'flow check-contents'
+let g:syntastic_javascript_flow_exe = 'flow'
 let g:syntastic_loc_list_height = 5
 
 " IndentGuide
