@@ -1,5 +1,5 @@
 # dot
 conf files
 
-# Colors
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+# VIM
+YouCompleteMe plugin has to be compiled.
