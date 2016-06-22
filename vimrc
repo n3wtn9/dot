@@ -19,6 +19,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'janko-m/vim-test'
 Plugin 'raimondi/delimitmate'
+Plugin 'junegunn/vim-easy-align'
+Plugin 'Valloric/YouCompleteMe'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,7 +51,7 @@ set splitright
 set splitbelow
 
 " show line breaks
-set list
+" set list
 set listchars=eol:¬
 
 " Automatically switch window to current directory.
