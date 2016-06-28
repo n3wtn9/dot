@@ -40,7 +40,7 @@ set ignorecase
 set textwidth=79
 set shiftround
 
-" order matters
+" colorscheme (order matters)
 set t_Co=256
 syntax enable
 set background=dark
@@ -58,15 +58,24 @@ set listchars=eol:¬
 " Automatically switch window to current directory.
 " This should have less problems than set autochdir.
 " If there is wierd behavior with other apps, this might be the problem.
+" FYI you can also do :E
 " autocmd BufEnter * silent! lcd %:p:h
 
-" Custom Keys
+" tabbing
 " for command mode
 nnoremap <S-Tab> <<
 " for insert mode
 inoremap <S-Tab> <C-d>
 
-" Airline
+" move among buffers with CTRL
+map <C-K> :bn<CR>
+map <C-J> :bp<CR>
+" allow you to jump between buffers without saving
+set hidden
+
+""" Plugin configs """
+
+" begin airline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -98,14 +107,15 @@ let g:airline_symbols.linenr = ''
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-" end airline
+" end airline 
 
-" neerdtree
+" begin nerdtree
 " au VimEnter *  NERDTree
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize = 40 
+" end nerdtree
 
-" Synatstic
+" begin synatstic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -118,6 +128,7 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':   [],'passive_filetypes': [] }
 " noremap <C-w>e :SyntasticCheck<CR>
 " noremap <C-w>f :SyntasticToggleMode<CR>
+
 " To disable warnings use: 
 " let g:syntastic_quiet_messages={'level':'warnings'}
 
@@ -127,27 +138,26 @@ let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_javascript_checkers = ['flow']
 let g:syntastic_javascript_flow_exe = 'flow'
 let g:syntastic_loc_list_height = 5
+" end syntaastic
 
-" IndentGuide
+" begin indentguide
 hi IndentGuidesOdd  ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
+" end indentguide
 
-" move among buffers with CTRL
-map <C-K> :bn<CR>
-map <C-J> :bp<CR>
-
-" config janko-m/vim-test
+" begin janko-m/vim-test
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 " nmap <silent> <leader>a :TestSuite<CR>
 " nmap <silent> <leader>l :TestLast<CR>
 " nmap <silent> <leader>g :TestVisit<CR>
+" end janko-m/vim-test
 
-" config ctrlp ignore cards
+" begin ctrlp ignore cards
 let g:ctrlp_by_filename = 1
 " Use the nearest .git directory as the cwd
 " " This makes a lot of sense if you are working on a project that is in
@@ -155,10 +165,11 @@ let g:ctrlp_by_filename = 1
 " " control. It also supports works with .svn, .hg, .bzr.
 let g:ctrlp_working_path_mode = 'r'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+" end ctrlp
