@@ -39,6 +39,7 @@ set incsearch
 set ignorecase
 set textwidth=79
 set shiftround
+set hlsearch
 
 " colorscheme (order matters)
 set t_Co=256
@@ -165,7 +166,7 @@ let g:ctrlp_by_filename = 1
 " " control. It also supports works with .svn, .hg, .bzr.
 let g:ctrlp_working_path_mode = 'r'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*     " MacOSX/Linux
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.class,*/target/*,*/node_modules/*,*/build/*     " MacOSX/Linux
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
@@ -173,3 +174,11 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 " end ctrlp
+
+" start easy-align
+" " Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+"
+" " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+" end easy-align
