@@ -1,6 +1,9 @@
 # dot
 conf files
-
+```
+git clone   
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 # iTerm
 Use iTerm with tmux integration over ssh
 ```
