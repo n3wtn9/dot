@@ -1,7 +1,8 @@
 # dot
 conf files
 ```
-git clone   
+git clone https://github.com/n3wtn9/dot.git ~/.dot
+ln -s ~/.dot/vimrc ~/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 # iTerm
