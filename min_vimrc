@@ -1,0 +1,13 @@
+et backspace=2     " backspace in insert mode works like regular editor
+set softtabstop=2   " indent 2 spaces when hitting tab      
+set shiftwidth=2    " indent 2 spaces when auto-indenting
+set expandtab       " make tabs spaces
+set nobackup        " get rid of ~file
+set incsearch       " incremental search
+set hlsearch        " highlight search
+set ignorecase      " ignore case during search
+set shiftround      " shift to multiples of shiftwidth
+set number          " set line numbers
+set autoindent      " auto indent :)
+syntax on           " code highlights
+filetype indent on  " file highlight
