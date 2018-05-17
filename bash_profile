@@ -8,7 +8,12 @@ alias tmux="TERM=xterm-256color tmux"
 # set timezone                                                                                                           
 TZ='America/Los_Angeles'; export TZ                                                                                      
 
+alias gl='git log --oneline --graph --decorate --all'
+
+alias ll='ls -lFh'
+
 # run bashrc                                                                                                             
 if [ -f ~/.bashrc ]; then                                                                                                
    source ~/.bashrc                                                                                                      
 fi 
+
