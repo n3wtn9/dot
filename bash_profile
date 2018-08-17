@@ -17,3 +17,8 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc                                                                                                      
 fi 
 
+# compare change in branch from a common ancestry
+# $1 base, $2 branch
+gitcompare() {
+  git diff --name-only $2  $(git merge-base $1 $2)
+}
