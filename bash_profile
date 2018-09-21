@@ -10,7 +10,7 @@ TZ='America/Los_Angeles'; export TZ
 
 alias gl='git log --oneline --graph --decorate --all'
 
-alias ll='ls -lFh'
+alias ll='ls -lFGhH'
 
 # run bashrc                                                                                                             
 if [ -f ~/.bashrc ]; then                                                                                                
