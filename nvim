@@ -1,0 +1,46 @@
+call plug#begin()
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'sheerun/vim-polyglot'
+Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
+Plug 'vim-python/python-syntax'
+Plug 'plasticboy/vim-markdown'
+Plug 'stephpy/vim-yaml'
+call plug#end()
+
+" file settings
+set shiftwidth=2                  " number of spaces to use for indenting
+set softtabstop=2                 " number of spaces to use when inserting a tab
+set tabstop=2                     " show tabs as 2 spaces
+set autoindent                    " copy indent from previous line
+set expandtab
+
+" file manipulation
+set splitright                    " vsplit to the right
+
+" color scheme
+syntax on
+set background=dark
+set termguicolors
+colorscheme gruvbox
+
+" search settings
+set ignorecase
+
+" for nerdcommenter
+filetype plugin on
+
+" map Ctrl+n to toggle NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" vim-markdown
+let g:vim_markdown_folding_disabled = 1
+
+" vim-json
+" setlocal foldmethod=syntax
