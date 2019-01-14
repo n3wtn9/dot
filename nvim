@@ -27,7 +27,7 @@ set splitright                    " vsplit to the right
 " color scheme
 syntax on
 set background=dark
-set termguicolors
+" set termguicolors " sometimes breaks colors
 colorscheme gruvbox
 
 " search settings
