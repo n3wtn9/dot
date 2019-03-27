@@ -10,7 +10,8 @@ TZ='America/Los_Angeles'; export TZ
 
 alias gl='git log --oneline --graph --decorate --all'
 
-alias ll='ls -lFGhH'
+# sort by time reverse
+alias ll='ls -lFGhHtr'
 
 # run bashrc                                                                                                             
 if [ -f ~/.bashrc ]; then                                                                                                
