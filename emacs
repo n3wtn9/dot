@@ -86,4 +86,10 @@ There are two things you can do about this warning:
 
 ;; Handy key definition
 (global-set-key (kbd "C-M-S-q") 'unfill-region)
+
+;; join line to next line
+(global-set-key (kbd "C-j")
+            (lambda ()
+                  (interactive)
+                  (join-line -1)))
 ;; custom key bindings end
