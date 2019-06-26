@@ -25,7 +25,7 @@ There are two things you can do about this warning:
  '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
-    (helm-lsp flycheck dap-mode lsp-ui company-lsp yasnippet projectile use-package lsp-java lsp-treemacs helm))))
+    (transpose-frame helm-lsp flycheck dap-mode lsp-ui company-lsp yasnippet projectile use-package lsp-java lsp-treemacs helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -70,7 +70,14 @@ There are two things you can do about this warning:
 (use-package dap-java :after (lsp-java))
 
 (setq lsp-java-format-on-type-enabled nil)
+(setq lsp-ui-doc-enable nil)
+(setq lsp-ui-sideline-enable nil)
 ;; lsp-java end
+
+;; projectile settings start
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+;; projectile settings end
 
 ;; custom key bindings start
 (global-set-key (kbd "M-o") 'other-window)
@@ -86,16 +93,12 @@ There are two things you can do about this warning:
 
 ;; Handy key definition
 (global-set-key (kbd "C-M-S-q") 'unfill-region)
-
-;; join line to next line
-(global-set-key (kbd "C-j")
-            (lambda ()
-                  (interactive)
-                  (join-line -1)))
 ;; custom key bindings end
-
 
 ;; custom variables start
 ;; for version control changes, update buffer
 (global-auto-revert-mode 1)
+(global-hl-line-mode 1)
+(column-number-mode 1)
+(delete-selection-mode 1)
 ;; custom variables end
