@@ -93,3 +93,9 @@ There are two things you can do about this warning:
                   (interactive)
                   (join-line -1)))
 ;; custom key bindings end
+
+
+;; custom variables start
+;; for version control changes, update buffer
+(global-auto-revert-mode 1)
+;; custom variables end
