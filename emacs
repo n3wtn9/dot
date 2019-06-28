@@ -103,6 +103,7 @@ There are two things you can do about this warning:
 (delete-selection-mode 1)
 (setq make-backup-files nil)
 (defalias 'yes-or-no-p 'y-or-n-p)
+(tool-bar-mode -1)
 ;; custom variables end
 
 
