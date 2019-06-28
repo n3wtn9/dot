@@ -101,4 +101,9 @@ There are two things you can do about this warning:
 (global-hl-line-mode 1)
 (column-number-mode 1)
 (delete-selection-mode 1)
+(setq make-backup-files nil)
+(defalias 'yes-or-no-p 'y-or-n-p)
 ;; custom variables end
+
+
+
