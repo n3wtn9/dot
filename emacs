@@ -93,6 +93,9 @@ There are two things you can do about this warning:
 
 ;; Handy key definition
 (global-set-key (kbd "C-M-S-q") 'unfill-region)
+
+;; Fix xref-find-reference error in lsp-java
+(define-key lsp-ui-mode-map [remap xref-find-references] #'lsp-ui-peek-find-references)
 ;; custom key bindings end
 
 ;; custom variables start
