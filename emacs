@@ -25,7 +25,7 @@ There are two things you can do about this warning:
  '(custom-enabled-themes (quote (wheatgrass)))
  '(package-selected-packages
    (quote
-    (transpose-frame helm-lsp flycheck dap-mode lsp-ui company-lsp yasnippet projectile use-package lsp-java lsp-treemacs helm))))
+    (yaml-mode ggtags ace-window transpose-frame helm-lsp flycheck dap-mode lsp-ui company-lsp yasnippet projectile use-package lsp-java lsp-treemacs helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -69,6 +69,7 @@ There are two things you can do about this warning:
 
 (use-package dap-java :after (lsp-java))
 
+(setq lsp-java-references-code-lens-enabled t)
 (setq lsp-java-format-on-type-enabled nil)
 (setq lsp-ui-doc-enable nil)
 (setq lsp-ui-sideline-enable nil)
@@ -79,8 +80,14 @@ There are two things you can do about this warning:
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 ;; projectile settings end
 
+;; custom themes start
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+;; (load-theme `tron-legacy t)
+;; custom themes end
+
 ;; custom key bindings start
-(global-set-key (kbd "M-o") 'other-window)
+;;(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "M-o") 'ace-window)
 
 ;; join region into single line
 (defun unfill-region (beg end)
