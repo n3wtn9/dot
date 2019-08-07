@@ -85,9 +85,28 @@ There are two things you can do about this warning:
 ;; (load-theme `tron-legacy t)
 ;; custom themes end
 
+(use-package treemacs
+  :init
+  (with-eval-after-load 'winum
+    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+  :config
+  (progn
+    (setq treemacs-width 45))
+  :bind
+  (:map global-map
+        ("M-0"       . treemacs-select-window)))
+
 ;; custom key bindings start
 ;;(global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "M-o") 'ace-window)
+
+(global-set-key (kbd "M-i") 'imenu)
+
+;; custom key bindings start
+;;(global-set-key (kbd "M-o") 'other-window)
+(global-set-key (kbd "M-o") 'ace-window)
+
+(global-set-key (kbd "M-i") 'imenu)
 
 ;; join region into single line
 (defun unfill-region (beg end)
