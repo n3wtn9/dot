@@ -127,6 +127,10 @@ There are two things you can do about this warning:
 ;; custom variables start
 ;; for version control changes, update buffer
 (global-auto-revert-mode 1)
+
+;; add line numbers to the side
+(global-linum-mode t)
+
 (global-hl-line-mode 1)
 (column-number-mode 1)
 (delete-selection-mode 1)
