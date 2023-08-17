@@ -21,6 +21,8 @@ export PATH="$PATH:$PYTHON_BIN_PATH"
 
 # Multiple Homebrews on Apple Silicon
 
+arch=$(uname -m)
+
 if [ "$(arch)" = "arm64" ]; then
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
